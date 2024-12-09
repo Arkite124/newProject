@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로젝트</title>
+    <link rel="stylesheet" href="./index.css">
+    <script defer src="./app.js"></script>
+</head>
+<body>
+    <h1>프로젝트</h1>
+    <h2> 장바구니 최종버전 
+        <button id="ingredient" type="button">채소 불러오기</button>
+        <button id="alchol" type="button">주류 불러오기</button>
+        <button id="instant" type="button">즉석식품 불러오기</button>
+    </h2>
+    <ul id="basketList">
+    </ul>
+    <div id="SelectedList">
+        <h4>
+            장바구니 목록
+            <button id="moveSelectedList">접기</button>
+        </h4>
+        <table id="resultTable">
+            <thead>
+                <tr>
+                    <th>이름</th>
+                    <th>가격</th>
+                    <th>수량</th>
+                    <th>총가격</th>
+                    <th>삭제</th>
+                </tr>
+            </thead>
+            <tbody id="basketCont">
+                <tr id="trEx">
+                    <td>
+                        <b class="title"></b>
+                    </td>
+                    <td class="price"></td>
+                    <td class="cnt"></td>
+                    <td class="total"></td>
+                    <td>
+                         <button class="delBasket" data-num="">상품삭제</button>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="6">전체가격 : 
+                        <b id="totalPrice">0</b>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+        <p>
+            <button id="printBasketsBtn">장바구니 출력</button>
+        </p>
+    </div>
+
+</body>
+</html>

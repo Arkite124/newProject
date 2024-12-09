@@ -1,0 +1,49 @@
+[{
+    "num":1,
+    "title": "신선한 피망 3개묶음",
+    "price":5000,
+    "img[src]":"../img/product/피망.jpg"
+},
+{
+    "num":2,
+    "title": "슬라이스 블랙올리브1kg",
+    "price":7000,
+    "img[src]":"../img/product/슬라이스블랙올리브.jpg"
+},
+{
+    "num":3,
+    "title": "신선한 깻잎 1봉 200g",
+    "price":7900,
+    "img[src]":"../img/product/깻잎.jpg"
+},
+{
+    "num":4,
+    "title": "의성 햇Tong마늘 1kg",
+    "price":12900,
+    "img[src]":"../img/product/통마늘.jpeg"
+},
+{
+    "num":5,
+    "title": "올해 나온 햇고추 1kg",
+    "price":11900,
+    "img[src]":"../img/product/고추.jpg"
+},
+{
+    "num":6,
+    "title": "비싼 김장용 배추 3포기 제일 싸게",
+    "price":21900,
+    "img[src]":"../img/product/배추.jpg"
+},
+{
+    "num":7,
+    "title":"출하할때 막 수확한 흙당근 500g",
+    "price":9900,
+    "img[src]":"../img/product/흙당근.jpg"
+},
+{
+    "num":8,
+    "title":"우리 가족 건강식으로 딱 좋은 브로콜리 1개입",
+    "price":5900,
+    "img[src]":"../img/product/브로콜리.jpg"
+}
+]
