@@ -45,5 +45,29 @@
     "title":"우리 가족 건강식으로 딱 좋은 브로콜리 1개입",
     "price":5900,
     "img[src]":"./product/브로콜리.jpg"
+},
+{
+    "num":9,
+    "title":"브로콜리 형제 콜리플라워 역시 건강해! 1개입",
+    "price":4900,
+    "img[src]":"./product/콜리플라워.jpg"
+},
+{
+    "num":10,
+    "title":"아삭아삭하고 영양만점 양배추 1통",
+    "price":6900,
+    "img[src]":"./product/양배추.jpg"
+},
+{
+    "num":11,
+    "title":"어디든 곁들여 먹으면 맛있는 대파 1단",
+    "price":11000,
+    "img[src]":"./product/대파.jpg"
+},
+{
+    "num":12,
+    "title":"토마토는 채소랍니다 영양만점 토마토 1kg",
+    "price":9900,
+    "img[src]":"./product/토마토.jpg"
 }
 ]
