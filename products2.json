@@ -8,42 +8,42 @@
     "num":18,
     "title": "우리들의 뜨끈한 국물 진라면 5개입",
     "price":4800,
-    "img[src]":"../img/product2/진라면.jpg"
+    "img[src]":"./product2/진라면.jpg"
 },
 {
     "num":19,
     "title": "술안주로 딱, 매콤바삭 닭강정 ",
     "price":11000,
-    "img[src]":"../img/product2/매콤바삭닭강정.jpg"
+    "img[src]":"./product2/매콤바삭닭강정.jpg"
 },
 {
     "num":20,
     "title": "한 끼 대용 딱, 통새우볶음밥",
     "price":8600,
-    "img[src]":"../img/product2/통새우볶음밥.avif"
+    "img[src]":"./product2/통새우볶음밥.avif"
 },
 {
     "num":21,
     "title": "국민 간식겸 반찬 고메 토마토미트볼 10개입",
     "price":19900,
-    "img[src]":"../img/product2/고메토마토미트볼.jpg"
+    "img[src]":"./product2/고메토마토미트볼.jpg"
 },
 {
     "num":22,
     "title": "시원칼칼한 소고기뭇국 4개입",
     "price":15500,
-    "img[src]":"../img/product2/소고기무국.avif"
+    "img[src]":"./product2/소고기무국.avif"
 },
 {
     "num":23,
     "title":"시원한 멸치육수맛이 나는 쌀국수 30개입",
     "price":34900,
-    "img[src]":"../img/product2/멸치맛쌀국수.jpg"
+    "img[src]":"./product2/멸치맛쌀국수.jpg"
 },
 {
     "num":24,
     "title":"든든한 고향만두 500g 1+1",
     "price":8000,
-    "img[src]":"../img/product2/고향만두.webp"
+    "img[src]":"./product2/고향만두.webp"
 }
 ]
