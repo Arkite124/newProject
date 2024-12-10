@@ -99,18 +99,19 @@ ingredient.addEventListener("click", async () => {
             const price = document.createElement("p");
             price.innerText = `₩${product.price.toLocaleString()}`;
             price.style.color = "green";
+            price.style.fontWeight="bold"
 
             const qtyInput = document.createElement("input");
             qtyInput.type = "number";
             qtyInput.min = "1";
             qtyInput.max = "5";
             qtyInput.value = "1";
-            qtyInput.style.width = "50px";
+            qtyInput.id="qtyInput";
 
             const addButton = document.createElement("button");
             addButton.innerText = "담기";
-            addButton.style.backgroundColor = "#28a745";
-            addButton.style.color = "#fff";
+            addButton.id="addBtn"
+
 
             addButton.onclick = () => {
                 const quantity = Number(qtyInput.value);
@@ -203,12 +204,11 @@ alchol.addEventListener("click", async () => {
             qtyInput.min = "1";
             qtyInput.max = "3";
             qtyInput.value = "1";
-            qtyInput.style.width = "50px";
+            qtyInput.id="qtyInput";
 
             const addButton = document.createElement("button");
             addButton.innerText = "담기";
-            addButton.style.backgroundColor = "#28a745";
-            addButton.style.color = "#fff";
+            addButton.id="addBtn"  
 
             addButton.onclick = () => {
                 const quantity = Number(qtyInput.value);
@@ -300,12 +300,11 @@ instant.addEventListener("click", async () => {
             qtyInput.min = "1";
             qtyInput.max = "5";
             qtyInput.value = "1";
-            qtyInput.style.width = "50px";
+            qtyInput.id="qtyInput";
 
             const addButton = document.createElement("button");
             addButton.innerText = "담기";
-            addButton.style.backgroundColor = "#28a745";
-            addButton.style.color = "#fff";
+            addButton.id="addBtn"
 
             addButton.onclick = () => {
                 const quantity = Number(qtyInput.value);

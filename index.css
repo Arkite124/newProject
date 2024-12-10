@@ -17,20 +17,22 @@ body{
     background-color: antiquewhite;
     transition: all;
     transition-duration: 100ms;
-
+    font-family: "Hahmlet", serif;
     position: sticky;
     bottom: 0; 
     overflow: auto;
 }
 .resize{
-    transform: translateY(calc(100% - 40px)) 
+    transform: translateY(calc(100% - 55px)) 
 }
 table{
+    font-family: "Hahmlet", serif;
     border-collapse: collapse;
     text-align: center;
 }
 h4{margin: 10px; margin-left: 0;}
 #resultTable{
+    font-family: "Hahmlet", serif;
     background-color: bisque;
     width: 100%;
     padding: 25px;
@@ -47,8 +49,85 @@ h2>button{
     background: wheat; 
     width: 150px;
     height: 30px;
+    font-family: "Jua", sans-serif;
+    font-size: 20px;
 }
 h2>button:hover{
     background: darkred;
     color:wheat;
+}
+#addBtn{
+    background-color: aqua;
+    border: none;
+    color:black;
+    width:60px;
+    height: 30px;
+    border-radius: 4px;
+}
+#addBtn:hover{
+    background-color: brown;
+    color:white
+}
+#qtyInput{
+    width: 60px;
+    height: 25px;
+    font-size: 18px;
+}
+h1{
+    width: 100%;
+    font-family: "Jua", sans-serif;  
+    font-size: 60px;
+    height: 60px;
+    text-align: center;
+    color:rgb(197, 170, 15);
+
+}
+h1>span{
+    background-color: aquamarine;
+    font-weight: 500;
+    color:rgb(226, 43, 128);
+    border-radius: 10px;
+   
+}
+h2{
+    width: 100%;
+    background-color: brown;
+    font-size: 30px;
+    height: 50px;
+    color:white;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    user-select: none;
+    font-family: "Jua", sans-serif;
+    font-weight: 100;
+}
+#printBasketsBtn{
+    font-family: "Hahmlet", serif;
+    border: none;
+    border-radius: 5px;
+    height: 25px;
+    width: 100px;
+    background-color: gold;
+    color:green
+}
+#printBasketsBtn:hover{
+    background-color: black;
+    color: whitesmoke;
+}
+#moveSelectedList{
+    font-family: "Hahmlet", serif;
+    height: 30px;
+    width: 60px;
+    border: 1px solid brown;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+}
+#moveSelectedList:hover{
+    background-color: white;
+    color: black;
+}
+#productListContainer {
+    font-family: "Gowun Dodum", sans-serif;
 }
