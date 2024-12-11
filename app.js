@@ -55,11 +55,20 @@ baskets.delBasket = function (num) {
 // 상품 데이터 불러오기 및 화면 출력
 let isLoaded = false;
 ingredient.addEventListener("click", async () => {
+    const ingredient = document.getElementById("ingredient");
+
     if (isLoaded) {
-        alert("이미 상품이 불러와졌습니다.");
+        const ingredientproductListContainer = document.getElementById("ingredientProductListContainer");
+        if (ingredientproductListContainer) {
+            ingredientproductListContainer.remove(); 
+        }
+        ingredient.innerText = "채소상품 불러오기";
+        isLoaded = false;
         return;
     }
+
     isLoaded = true;
+    ingredient.innerText = "채소상품 닫기";
 
     try {
         const response = await fetch("./products.json");
@@ -69,7 +78,7 @@ ingredient.addEventListener("click", async () => {
 
         const products = await response.json();
         const productListContainer = document.createElement("div");
-        productListContainer.id = "productListContainer";
+        productListContainer.id = "ingredientProductListContainer";
         productListContainer.style.display = "flex";
         productListContainer.style.flexWrap = "wrap";
         productListContainer.style.gap = "20px";
@@ -161,13 +170,23 @@ ingredient.addEventListener("click", async () => {
         alert("상품 데이터를 가져오는 데 실패했습니다.");
     }
 });
-let isLoaded1=false
+let isLoaded1 = false;
+
 alchol.addEventListener("click", async () => {
+    const alchol = document.getElementById("alchol");
+
     if (isLoaded1) {
-        alert("이미 상품이 불러와졌습니다.");
+        const productListContainer = document.getElementById("alcoholProductListContainer");
+        if (productListContainer) {
+            productListContainer.remove(); // 주류 상품 목록 제거
+        }
+        alchol.innerText = "주류상품 불러오기";
+        isLoaded1 = false;
         return;
     }
+
     isLoaded1 = true;
+    alchol.innerText = "주류상품 닫기";
 
     try {
         const response = await fetch("./products1.json");
@@ -177,7 +196,7 @@ alchol.addEventListener("click", async () => {
 
         const products = await response.json();
         const productListContainer = document.createElement("div");
-        productListContainer.id = "productListContainer";
+        productListContainer.id = "alcoholProductListContainer"; 
         productListContainer.style.display = "flex";
         productListContainer.style.flexWrap = "wrap";
         productListContainer.style.gap = "20px";
@@ -212,10 +231,10 @@ alchol.addEventListener("click", async () => {
             qtyLabel.innerText = "수량: ";
             qtyLabel.style.display = "block";
             qtyLabel.style.marginTop = "10px";
-            
+
             const qtySelect = document.createElement("select");
-            qtySelect.id="qtyInput"
-            
+            qtySelect.id = "qtyInput";
+
             for (let i = 1; i <= 3; i++) {
                 const option = document.createElement("option");
                 option.value = i;
@@ -225,7 +244,7 @@ alchol.addEventListener("click", async () => {
 
             const addButton = document.createElement("button");
             addButton.innerText = "담기";
-            addButton.id="addBtn"  
+            addButton.id = "addBtn";
 
             addButton.onclick = () => {
                 const quantity = Number(qtySelect.value, 10);
@@ -267,13 +286,22 @@ alchol.addEventListener("click", async () => {
         alert("상품 데이터를 가져오는 데 실패했습니다.");
     }
 });
-let isloaded2=false
+
+let isLoaded2=false
 instant.addEventListener("click", async () => {
-    if (isloaded2) {
-        alert("이미 상품이 불러와졌습니다.");
+    const instant = document.getElementById("instant");
+    if (isLoaded2) {
+
+        const instantProductListContainer = document.getElementById("instantProductListContainer");
+        if (instantProductListContainer) {
+            instantProductListContainer.remove(); 
+        }
+        instant.innerText = "즉석상품 불러오기";
+        isLoaded2 = false;
         return;
     }
-    isloaded2 = true;
+    isLoaded2 = true;
+    instant.innerText = "즉석상품 닫기";
 
     try {
         const response = await fetch("./products2.json");
@@ -283,7 +311,7 @@ instant.addEventListener("click", async () => {
 
         const products = await response.json();
         const productListContainer = document.createElement("div");
-        productListContainer.id = "productListContainer";
+        productListContainer.id = "instantProductListContainer";
         productListContainer.style.display = "flex";
         productListContainer.style.flexWrap = "wrap";
         productListContainer.style.gap = "20px";
@@ -373,7 +401,6 @@ instant.addEventListener("click", async () => {
     }
 });
 
-// 장바구니 출력
 const printBaskets = () => {
     basketCont.innerHTML = "";
     for (let key in baskets) {
@@ -400,7 +427,7 @@ const printBaskets = () => {
 
 printBasketsBtn.onclick = async () => {
     try {
-        // 로그인된 사용자 정보 가져오기
+
         const loginResponse = await fetch("./loginUser.json");
         if (!loginResponse.ok) {
             throw new Error("로그인 데이터를 가져올 수 없습니다.");
@@ -409,7 +436,6 @@ printBasketsBtn.onclick = async () => {
         const loginUser = await loginResponse.json();
         const userId = loginUser.user_id;
 
-        // 로그인된 사용자와 관련된 장바구니 데이터 가져오기
         const basketResponse = await fetch(`./${userId}Baskets.json`);
         if (!basketResponse.ok) {
             throw new Error("장바구니 데이터를 가져올 수 없습니다.");
@@ -417,7 +443,6 @@ printBasketsBtn.onclick = async () => {
 
         const userBaskets = await basketResponse.json();
 
-        // 장바구니 데이터 추가
         userBaskets.forEach((item) => {
             const basketItem = {
                 num: item.num,
@@ -426,10 +451,9 @@ printBasketsBtn.onclick = async () => {
                 price: item.price,
                 total: item.cnt * item.price,
             };
-            baskets.setBasket(basketItem); // 기존 baskets 객체에 추가
+            baskets.setBasket(basketItem);
         });
 
-        // 장바구니 화면에 출력
         printBaskets();
     } catch (error) {
         console.error("에러 발생:", error);
@@ -448,7 +472,6 @@ moveSelectedList.onclick = () => {
     }
 };
 
-// 스타일 설정
 SelectedList.style.position = "fixed";
 SelectedList.style.bottom = "0";
 SelectedList.style.left = "0";

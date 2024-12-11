@@ -47,7 +47,7 @@ h4{margin: 10px; margin-left: 0;}
 }
 h2>button{
     background: wheat; 
-    width: 150px;
+    width: 180px;
     height: 30px;
     font-family: "Jua", sans-serif;
     font-size: 20px;
@@ -55,10 +55,11 @@ h2>button{
 h2>button:hover{
     background: darkred;
     color:wheat;
+    cursor: pointer;
 }
 #addBtn{
     background-color: aqua;
-    border: none;
+    border: 2px solid green;
     color:black;
     width:60px;
     height: 30px;
@@ -66,21 +67,25 @@ h2>button:hover{
 }
 #addBtn:hover{
     background-color: brown;
-    color:white
+    color:white;
+    cursor: pointer;
 }
 #qtyInput{
     width: 60px;
     height: 25px;
     font-size: 18px;
+    border: 2px solid gold;
+    border-radius: 4px;
 }
 h1{
+    min-width: max-content;
     width: 100%;
     font-family: "Jua", sans-serif;  
     font-size: 60px;
     height: 60px;
     text-align: center;
     color:rgb(197, 170, 15);
-
+    user-select: none;
 }
 h1>span{
     background-color: aquamarine;
@@ -90,11 +95,13 @@ h1>span{
    
 }
 h2{
-    width: 100%;
+    min-width: max-content;
+    width:calc(100% - 10px) ;
     background-color: brown;
     font-size: 30px;
     height: 50px;
-    color:white;
+    color:beige;
+    border: 5px solid #ccc;
     border-radius: 10px;
     text-align: center;
     justify-content: center;
@@ -104,16 +111,17 @@ h2{
 }
 #printBasketsBtn{
     font-family: "Hahmlet", serif;
-    border: none;
+    border: 3px solid silver;
     border-radius: 5px;
-    height: 25px;
+    height: 30px;
     width: 100px;
     background-color: gold;
-    color:green
+    cursor: pointer;
 }
 #printBasketsBtn:hover{
     background-color: black;
     color: whitesmoke;
+    cursor: pointer;
 }
 #moveSelectedList{
     font-family: "Hahmlet", serif;
@@ -127,7 +135,24 @@ h2{
 #moveSelectedList:hover{
     background-color: white;
     color: black;
+    cursor: pointer;
 }
-#productListContainer {
+#alcoholProductListContainer,
+#ingredientProductListContainer,
+#instantProductListContainer {
     font-family: "Gowun Dodum", sans-serif;
+}
+.delBasket{
+    width: 80px;
+    height: 27px;
+    border: none;
+    background-color: beige;
+    color: brown;
+    border-radius: 5px;
+    border: 3px solid gold;
+}
+.delBasket:hover{
+    background-color: brown;
+    color: beige;
+    cursor: pointer;
 }
