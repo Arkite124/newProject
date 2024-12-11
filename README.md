@@ -4,4 +4,5 @@ Patch Log<br>
 2. product.json,product1.json,product2.json에 상품 목록 이미지파일 파일경로 동기화(12/10)<br>
 3. loginUser.json,arkiteBaskets.json 데이터 수정 및 업데이트(12/10)<br>
 4. 전체적인 상품 갯수를 추가로 업데이트 했습니다. product,product2에 해당하는 이미지 및 product,product1,product2의 코드 번호 변경 주류는 내일 마저 업데이트 예정입니다.(12/10)<br>
+5. product1(주류) 이미지파일 마무리 및 qtyinput 구조 변경 input => select, 주류는 3개 이상 선택 불가, 글씨체 튀는거 조정 마무리(12/11)
 
