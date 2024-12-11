@@ -101,12 +101,20 @@ ingredient.addEventListener("click", async () => {
             price.style.color = "green";
             price.style.fontWeight="bold"
 
-            const qtyInput = document.createElement("input");
-            qtyInput.type = "number";
-            qtyInput.min = "1";
-            qtyInput.max = "5";
-            qtyInput.value = "1";
-            qtyInput.id="qtyInput";
+            const qtyLabel = document.createElement("label");
+            qtyLabel.innerText = "수량: ";
+            qtyLabel.style.display = "block";
+            qtyLabel.style.marginTop = "10px";
+            
+            const qtySelect = document.createElement("select");
+            qtySelect.id="qtyInput"
+
+            for (let i = 1; i <= 5; i++) {
+                const option = document.createElement("option");
+                option.value = i;
+                option.innerText = i;
+                qtySelect.appendChild(option);
+            }
 
             const addButton = document.createElement("button");
             addButton.innerText = "담기";
@@ -114,7 +122,7 @@ ingredient.addEventListener("click", async () => {
 
 
             addButton.onclick = () => {
-                const quantity = Number(qtyInput.value);
+                const quantity = Number(qtySelect.value, 10);
                 const price = Number(product.price);
 
                 if (isNaN(quantity) || quantity <= 0) {
@@ -143,7 +151,8 @@ ingredient.addEventListener("click", async () => {
             productCard.appendChild(img);
             productCard.appendChild(title);
             productCard.appendChild(price);
-            productCard.appendChild(qtyInput);
+            productCard.appendChild(qtyLabel);
+            qtyLabel.appendChild(qtySelect);        
             productCard.appendChild(addButton);
             productListContainer.appendChild(productCard);
         });
@@ -189,7 +198,7 @@ alchol.addEventListener("click", async () => {
             img.src = product["img[src]"];
             img.alt = product.title;
             img.style.width = "100%";
-            img.style.height = "60%";
+            img.style.height = "50%";
             img.style.borderRadius = "10px 10px 0 0";
 
             const title = document.createElement("h3");
@@ -199,19 +208,27 @@ alchol.addEventListener("click", async () => {
             price.innerText = `₩${product.price.toLocaleString()}`;
             price.style.color = "green";
 
-            const qtyInput = document.createElement("input");
-            qtyInput.type = "number";
-            qtyInput.min = "1";
-            qtyInput.max = "3";
-            qtyInput.value = "1";
-            qtyInput.id="qtyInput";
+            const qtyLabel = document.createElement("label");
+            qtyLabel.innerText = "수량: ";
+            qtyLabel.style.display = "block";
+            qtyLabel.style.marginTop = "10px";
+            
+            const qtySelect = document.createElement("select");
+            qtySelect.id="qtyInput"
+            
+            for (let i = 1; i <= 3; i++) {
+                const option = document.createElement("option");
+                option.value = i;
+                option.innerText = i;
+                qtySelect.appendChild(option);
+            }
 
             const addButton = document.createElement("button");
             addButton.innerText = "담기";
             addButton.id="addBtn"  
 
             addButton.onclick = () => {
-                const quantity = Number(qtyInput.value);
+                const quantity = Number(qtySelect.value, 10);
                 const price = Number(product.price);
 
                 if (isNaN(quantity) || quantity <= 0) {
@@ -240,7 +257,8 @@ alchol.addEventListener("click", async () => {
             productCard.appendChild(img);
             productCard.appendChild(title);
             productCard.appendChild(price);
-            productCard.appendChild(qtyInput);
+            productCard.appendChild(qtyLabel);
+            qtyLabel.appendChild(qtySelect);
             productCard.appendChild(addButton);
             productListContainer.appendChild(productCard);
         });
@@ -295,19 +313,27 @@ instant.addEventListener("click", async () => {
             price.innerText = `₩${product.price.toLocaleString()}`;
             price.style.color = "green";
 
-            const qtyInput = document.createElement("input");
-            qtyInput.type = "number";
-            qtyInput.min = "1";
-            qtyInput.max = "5";
-            qtyInput.value = "1";
-            qtyInput.id="qtyInput";
+            const qtyLabel = document.createElement("label");
+            qtyLabel.innerText = "수량: ";
+            qtyLabel.style.display = "block";
+            qtyLabel.style.marginTop = "10px";
+            
+            const qtySelect = document.createElement("select");
+            qtySelect.id="qtyInput"
+            
+            for (let i = 1; i <= 5; i++) {
+                const option = document.createElement("option");
+                option.value = i;
+                option.innerText = i;
+                qtySelect.appendChild(option);
+            }
 
             const addButton = document.createElement("button");
             addButton.innerText = "담기";
             addButton.id="addBtn"
 
             addButton.onclick = () => {
-                const quantity = Number(qtyInput.value);
+                const quantity = Number(qtySelect.value, 10);
                 const price = Number(product.price);
 
                 if (isNaN(quantity) || quantity <= 0) {
@@ -336,7 +362,8 @@ instant.addEventListener("click", async () => {
             productCard.appendChild(img);
             productCard.appendChild(title);
             productCard.appendChild(price);
-            productCard.appendChild(qtyInput);
+            productCard.appendChild(qtyLabel);
+            qtyLabel.appendChild(qtySelect);
             productCard.appendChild(addButton);
             productListContainer.appendChild(productCard);
         });

@@ -36,14 +36,38 @@
 },
 {
     "num":19,
-    "title": "캔달잭슨와인",
+    "title": "캔달잭슨 샤도네이 화이트와인",
     "price":55000,
-    "img[src]":"./product1/캔달잭슨와인.jpg"
+    "img[src]":"./product1/캔달잭슨샤도네이.webp"
 },
 {
     "num":20,
     "title":"브라운브라더스시에나",
     "price":21900,
     "img[src]":"./product1/브라운브라더스시에나.jpg"
+},
+{
+    "num":21,
+    "title": "달달한 대만망고맥주 330ml 30개입",
+    "price":94000,
+    "img[src]":"./product1/망고맥주.webp"
+},
+{
+    "num":22,
+    "title": "호로요이 복숭아 맥주 330ml 4캔",
+    "price":12000,
+    "img[src]":"./product1/호로요이복숭아맥주.webp"
+},
+{
+    "num":23,
+    "title": "잭다니엘 위스키 1000ml 1병",
+    "price":79900,
+    "img[src]":"./product1/잭다니엘1000ml.jpg"
+},
+{
+    "num":24,
+    "title": "산토리위스키 700ml 1병",
+    "price":49900,
+    "img[src]":"./product1/산토리위스키.jpg"
 }
 ]
