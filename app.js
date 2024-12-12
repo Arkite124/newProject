@@ -462,11 +462,14 @@ printBasketsBtn.onclick = async () => {
 
 
 moveSelectedList.onclick = () => {
+    const body=document.body
     if (SelectedList.classList.contains("resize")) {
         SelectedList.classList.remove("resize");
         moveSelectedList.innerText = "접기";
+        body.style.paddingBottom="230px";
     } else {
         SelectedList.classList.add("resize");
+        body.style.paddingBottom="65px";
         moveSelectedList.innerText = "펴기";
     }
 };
