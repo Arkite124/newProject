@@ -14,17 +14,23 @@ body{
 #SelectedList{
     width: calc(100% - 20px);
     height: 200px;
-    background-color: antiquewhite;
+    background-color: rgb(247, 189, 114);
     transition: all;
     transition-duration: 100ms;
     font-family: "Hahmlet", serif;
-    position: sticky;
     bottom: 0; 
-    overflow: auto;
+    position: fixed;
+    left : 0;
+    box-shadow : 0 -4px 8px rgba(0, 0, 0, 0.1);
+    padding:10px;
+    border-radius: 10px 10px 0 0;
+    user-select: none;
 }
 .resize{
-    transform: translateY(calc(100% - 55px)) 
+    transform: translateY(calc(100% - 55px));
+    width: fit-content!important;
 }
+
 table{
     font-family: "Hahmlet", serif;
     border-collapse: collapse;
@@ -38,6 +44,7 @@ h4{margin: 10px; margin-left: 0;}
     padding: 25px;
     padding-right:-100px;
     text-align: center;
+    user-select: none;
 }
 #resultTable>tfoot{
     text-align: right;
@@ -64,6 +71,7 @@ h2>button:hover{
     width:60px;
     height: 30px;
     border-radius: 4px;
+    user-select: none;
 }
 #addBtn:hover{
     background-color: brown;
@@ -131,6 +139,7 @@ h2{
     background-color: black;
     color: white;
     border-radius: 5px;
+    user-select: none;
 }
 #moveSelectedList:hover{
     background-color: white;
@@ -141,10 +150,11 @@ h2{
 #ingredientProductListContainer,
 #instantProductListContainer {
     font-family: "Gowun Dodum", sans-serif;
+    user-select: none;
 }
 .delBasket{
     width: 80px;
-    height: 27px;
+    height: 25px;
     border: none;
     background-color: beige;
     color: brown;

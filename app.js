@@ -8,7 +8,6 @@ const loadData = async function () {
     ]);
 
     let objArr = await Promise.all(resArr.map((res) => res.json()));
-    console.log(objArr);
     const loginUser = objArr[0];
     const products = objArr[1];
 
@@ -471,12 +470,4 @@ moveSelectedList.onclick = () => {
         moveSelectedList.innerText = "펴기";
     }
 };
-
-SelectedList.style.position = "fixed";
-SelectedList.style.bottom = "0";
-SelectedList.style.left = "0";
-SelectedList.style.backgroundColor = "#beige";
-SelectedList.style.boxShadow = "0 -4px 8px rgba(0, 0, 0, 0.1)";
-SelectedList.style.padding = "10px";
-
 loadData();
