@@ -113,6 +113,7 @@ ingredient.addEventListener("click", async () => {
             qtyLabel.innerText = "수량: ";
             qtyLabel.style.display = "block";
             qtyLabel.style.marginTop = "10px";
+            qtyLabel.style.paddingBottom = "10px";
             
             const qtySelect = document.createElement("select");
             qtySelect.id="qtyInput"
@@ -127,7 +128,9 @@ ingredient.addEventListener("click", async () => {
             const addButton = document.createElement("button");
             addButton.innerText = "담기";
             addButton.id="addBtn"
-
+            const purchasebtn=document.createElement("button")
+            purchasebtn.innerText = "바로구매"
+            purchasebtn.id="P_btn"
 
             addButton.onclick = () => {
                 const quantity = Number(qtySelect.value, 10);
@@ -162,6 +165,7 @@ ingredient.addEventListener("click", async () => {
             productCard.appendChild(qtyLabel);
             qtyLabel.appendChild(qtySelect);        
             productCard.appendChild(addButton);
+            productCard.appendChild(purchasebtn);
             productListContainer.appendChild(productCard);
         });
     } catch (error) {
@@ -244,6 +248,9 @@ alchol.addEventListener("click", async () => {
             const addButton = document.createElement("button");
             addButton.innerText = "담기";
             addButton.id = "addBtn";
+            const purchasebtn=document.createElement("button")
+            purchasebtn.innerText = "바로구매"
+            purchasebtn.id="P_btn"
 
             addButton.onclick = () => {
                 const quantity = Number(qtySelect.value, 10);
@@ -278,6 +285,7 @@ alchol.addEventListener("click", async () => {
             productCard.appendChild(qtyLabel);
             qtyLabel.appendChild(qtySelect);
             productCard.appendChild(addButton);
+            productCard.appendChild(purchasebtn);
             productListContainer.appendChild(productCard);
         });
     } catch (error) {
@@ -358,6 +366,9 @@ instant.addEventListener("click", async () => {
             const addButton = document.createElement("button");
             addButton.innerText = "담기";
             addButton.id="addBtn"
+            const purchasebtn=document.createElement("button")
+            purchasebtn.innerText = "바로구매"
+            purchasebtn.id="P_btn"
 
             addButton.onclick = () => {
                 const quantity = Number(qtySelect.value, 10);
@@ -392,6 +403,7 @@ instant.addEventListener("click", async () => {
             productCard.appendChild(qtyLabel);
             qtyLabel.appendChild(qtySelect);
             productCard.appendChild(addButton);
+            productCard.appendChild(purchasebtn);
             productListContainer.appendChild(productCard);
         });
     } catch (error) {

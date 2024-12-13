@@ -65,17 +65,31 @@ h2>button:hover{
     cursor: pointer;
 }
 #addBtn{
-    background-color: aqua;
+    background-color: #8eecee;
     border: 2px solid green;
     color:black;
-    width:60px;
+    width:80px;
     height: 30px;
     border-radius: 4px;
-    user-select: none;
+    font-family: "Gowun Dodum", sans-serif;
+    font-size: 18px;
 }
 #addBtn:hover{
     background-color: brown;
     color:white;
+    cursor: pointer;
+}
+#P_btn{
+    background-color: yellow;
+    font-family: "Gowun Dodum", sans-serif;
+    width:80px;
+    height: 30px;
+    border-radius: 4px;
+    border: 2px solid blueviolet;
+}
+#P_btn:hover{
+    background-color: black;
+    color: azure;
     cursor: pointer;
 }
 #qtyInput{
@@ -85,6 +99,11 @@ h2>button:hover{
     border: 2px solid gold;
     border-radius: 4px;
 }
+#qtyInput:focus{
+    border: 2px solid gold;
+    color : darkblue;
+}
+
 h1{
     min-width: max-content;
     width: 100%;
